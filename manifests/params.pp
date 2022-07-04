@@ -1,7 +1,7 @@
 # Operrating system related variables
 #
 class apache::params {
-  $install_ensure = 'absent'
+  $install_ensure = 'present'
   case $::osfamily {
     'RedHat': {
       $install_name = 'httpd'
