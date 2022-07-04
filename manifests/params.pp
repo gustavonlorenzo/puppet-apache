@@ -1,4 +1,4 @@
-#
+# Operrating system related variables
 #
 class apache::params {
   $install_ensure = 'present'
