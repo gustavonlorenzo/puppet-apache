@@ -8,7 +8,7 @@ class apache (
   String $config_ensure,
   String $config_path,
   Enum["running", "stopped"] $service_ensure,
-  String $service_name
+  String  $service_name,
   Boolean $service_enable,
 ) {
   contain apache::install
