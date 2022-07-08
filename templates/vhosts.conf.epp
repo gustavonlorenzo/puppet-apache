@@ -1,0 +1,7 @@
+<VirtualHost *:80>
+    ServerName subdomain.gus.com
+    ServerAlias subdomain
+    ServerAdmin admin@gus.com
+    DocumentRoot /var/www/subdomain/html
+</VirtualHost>
+    
