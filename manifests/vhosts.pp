@@ -12,8 +12,8 @@ define apache::vhosts (
 ) {
   file { "${docroot}": 
     ensure => 'directory',
-    owner  => '$apache::vhosts_owner',
-    group  => '$apache::vhosts_group',
+    owner  => $apache::vhosts_owner,
+    group  => $apache::vhosts_group,
   }
 
   file { "${apache::vhosts_dir}/${subdomain}.conf":
