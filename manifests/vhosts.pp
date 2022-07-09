@@ -18,8 +18,8 @@ define apache::vhosts (
 
   file { "${apache::vhosts_dir}/${subdomain}.conf":
     ensure  => 'file',
-    owner   => '$apache::vhosts_owner',
-    group   => '$apache::vhosts_group',
+    owner   => $apache::vhosts_owner,
+    group   => $apache::vhosts_group,
     mode    => '0644',
     content => epp('apache/vhosts.conf.epp', {
       'port'      => $port,
