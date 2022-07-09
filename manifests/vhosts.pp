@@ -12,14 +12,14 @@ define apache::vhosts (
 ) {
   file { "${docroot}": 
     ensure => 'directory',
-    owner  => '$apache::vhost_owner',
-    group  => '$apache::vhost_group',
+    owner  => '$apache::vhosts_owner',
+    group  => '$apache::vhosts_group',
   }
 
   file { "${apache::vhosts_dir}/${subdomain}.conf":
     ensure  => 'file',
-    owner   => '$apache::vhost_owner',
-    group   => '$apache::vhost_group',
+    owner   => '$apache::vhosts_owner',
+    group   => '$apache::vhosts_group',
     mode    => '0644',
     content => epp('apache/vhosts.conf.epp', {
       'port'      => $port,
