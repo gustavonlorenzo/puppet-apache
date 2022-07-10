@@ -16,9 +16,6 @@ describe 'apache' do
       when 'Debian'
         it { is_expected.to contain_package('apache2').with_ensure('present') }
         it { is_expected.to contain_service('apache2').with(ensure: 'running', enable: true, hasrestart: true) }
-      when 'RedHat'
-        it { is_expected.to contain_package('httpd').with_ensure('present') }
-        it { is_expected.to contain_service('httpd').with(ensure: 'running', enable: true, hasrestart: true) }
       end
     end
   end
