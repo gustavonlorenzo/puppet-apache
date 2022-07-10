@@ -9,7 +9,7 @@ describe 'apache' do
 
       it { is.expected.to contain_class('apache::install') }
       it { is.expected.to contain_class('apache::config') }
-      it { is.expected.to contain_class('apache::service') a}
+      it { is.expected.to contain_class('apache::service') }
       it { is_expected.to compile }
     end
   end
