@@ -4,4 +4,5 @@
 #   include apache
 class apache {
   include apache::install
+  include apache::params
 }
